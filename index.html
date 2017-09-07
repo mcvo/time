@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="application-name" content="Trackr"/>
+<meta name="msapplication-square70x70logo" content="small.jpg"/>
+<meta name="msapplication-square150x150logo" content="medium.jpg"/>
+<meta name="msapplication-wide310x150logo" content="wide.jpg"/>
+<meta name="msapplication-square310x310logo" content="large.jpg"/>
+<meta name="msapplication-TileColor" content="#2770f0"/>
+<title>Main T</title>
+<style type="text/css">body{font-family:sans-serif;visibility:hidden}.show{visibility:visible!important}</style>
+<script type="text/javascript">var d=new Date,getDaysInMonth=function(e,a){return new Date(a,e,0).getDate()},days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],month=["January","February","March","April","May","June","July","August","September","October","November","December"],day=d.getDate(),monthme=d.getMonth(),year=d.getFullYear(),monthone=monthme+1,daytxt=days[d.getDay()],monthtxt=month[d.getMonth()],dim=getDaysInMonth(monthone,year);today=new Date;var endofyear=new Date(today.getFullYear(),11,31),one_day=864e5,yeardata=Math.ceil((endofyear.getTime()-today.getTime())/one_day),yeardataone=yeardata+1,daytill=365-yeardataone,s="/",sp="&nbsp;";</script>
+</head>
+<body>
+<p>The day is <span id="data1"></span></p>
+<p>Today is <span id="data2"></span></p>
+<p>Today is <span id="data3"></span></p>
+<p>There are <span id="data4"></span> days in this month</p>
+<p>There are <span id="remainingday"></span> days left in this month</p>
+<p><span id="data5"></span> days in to the year</p>
+<p><span id="data6"></span> days till <span id="nyear"></span></p>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script type="text/javascript">$(function(){getRemanningDays()});var getRemanningDays=function(){var e=new Date,t=new Date(e.getTime());t.setMonth(e.getMonth()+1),t.setDate(0);var a=t.getDate()>e.getDate()?t.getDate()-e.getDate():0;$("#remainingday").html(a)};document.getElementById("data1").innerHTML=daytxt,document.getElementById("data2").innerHTML=day+s+monthone+s+year,document.getElementById("data3").innerHTML=daytxt+sp+monthtxt+sp+year,document.getElementById("data4").innerHTML=dim,document.getElementById("data5").innerHTML=daytill,document.getElementById("data6").innerHTML=yeardataone,document.getElementById("nyear").innerHTML=year+1,document.body.className="show";</script>
+</body>
+</html>
